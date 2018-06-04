@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.yunrich</groupId>
+    <artifactId>tmmod</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <artifactId>tmmod-utils</artifactId>
+  <packaging>jar</packaging>
+
+  <url>http://maven.apache.org</url>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+	<!-- 日志文件管理包 --> 
+    <dependency>  
+		<groupId>log4j</groupId>  
+		<artifactId>log4j</artifactId>  
+    </dependency> 
+    <dependency>  
+		<groupId>org.slf4j</groupId>  
+		<artifactId>slf4j-api</artifactId>  
+    </dependency>  
+    <dependency>  
+		<groupId>org.slf4j</groupId>  
+		<artifactId>slf4j-log4j12</artifactId>  
+    </dependency>
+     
+	<!-- Map工具类 -->
+	<dependency>
+	    <groupId>commons-collections</groupId>
+	    <artifactId>commons-collections</artifactId>
+	</dependency>
+
+	<dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjweaver</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>commons-lang</groupId>
+		<artifactId>commons-lang</artifactId>
+	</dependency>
+
+	<!-- 4.Spring -->
+    <!-- Spring-1)Spring核心 -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-beans</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+    </dependency>
+    <!-- Spring-4)Spring test -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+    </dependency>
+    
+  </dependencies>
+</project>

@@ -1,0 +1,6 @@
+org\yunrich\tmmod\webapp\controller\biz\TestLight7Controller.class
+org\yunrich\tmmod\webapp\common\filter\ByPassOtherFilter.class
+org\yunrich\tmmod\webapp\common\utils\ClasswxCommonWebUtils.class
+org\yunrich\tmmod\webapp\vo\TestLight.class
+org\yunrich\tmmod\webapp\controller\VisitController.class
+org\yunrich\tmmod\webapp\controller\PnrWxBkNoticeController.class
