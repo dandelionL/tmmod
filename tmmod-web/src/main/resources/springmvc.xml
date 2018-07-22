@@ -16,6 +16,7 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 	<!-- 配置处理器映射器  适配器 -->
 	<mvc:annotation-driven />
 	
+	<mvc:default-servlet-handler/>
 	
 	<!-- 配置视图解释器 jsp -->
 	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">

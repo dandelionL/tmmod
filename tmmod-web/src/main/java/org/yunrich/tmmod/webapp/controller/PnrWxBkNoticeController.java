@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class PnrWxBkNoticeController {
 
-    @RequestMapping("/pnrwx/bkNotice")
+    @RequestMapping("/kaylee/bkNotice")
     public String pnrWxBkNotice(ModelMap model, HttpServletRequest request, HttpServletResponse response) {
          
         BufferedReader br;
