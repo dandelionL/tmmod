@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.yunrich.tmmod.dal.dao.UserInfoMapper">
+  <resultMap id="BaseResultMap" type="org.yunrich.tmmod.dal.model.UserInfoDO">
+    <result column="user_mobile" jdbcType="CHAR" property="userMobile" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="wx_oper_id" jdbcType="VARCHAR" property="wxOperId" />
+    <result column="stat" jdbcType="CHAR" property="stat" />
+    <result column="user_role" jdbcType="VARCHAR" property="userRole" />
+    <result column="creat_time" jdbcType="TIMESTAMP" property="creatTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    user_mobile, user_name, wx_oper_id, stat, user_role, creat_time, update_time
+  </sql>
+  <select id="selectByWxOperId" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user_info
+    where wx_oper_id = #{wxOperId,jdbcType=VARCHAR}
+  </select>
+  
+    <select id="selectByMobile" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user_info
+    where user_mobile = #{record.userMobile,jdbcType=CHAR}
+  </select>
+  
+  <update id="updateForBindWxByMobile" parameterType="org.yunrich.tmmod.dal.model.edo.UserInfoEDO">
+    update user_info
+    <set>
+      <if test="record.userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.wxOperId != null">
+        wx_oper_id = #{wxOperId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stat != null">
+        stat = #{stat,jdbcType=CHAR},
+      </if>
+      <if test="record.userRole != null">
+        user_role = #{userRole,jdbcType=VARCHAR},
+      </if>
+      <if test="record.creatTime != null">
+        creat_time = #{creatTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where user_mobile = #{record.userMobile,jdbcType=CHAR}
+    and stat = #{oldStat,jdbcType=CHAR}
+  </update>
+</mapper>

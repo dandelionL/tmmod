@@ -47,7 +47,25 @@
 		<groupId>commons-lang</groupId>
 		<artifactId>commons-lang</artifactId>
 	</dependency>
-
+	<dependency>
+	  <groupId>org.dom4j</groupId>
+	  <artifactId>dom4j</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>com.thoughtworks.xstream</groupId>
+		<artifactId>xstream</artifactId>
+	</dependency>
+	<dependency>
+	  <groupId>net.sf.json-lib</groupId>
+	  <artifactId>json-lib</artifactId>
+	  <classifier>jdk15</classifier>
+	</dependency>
+	
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+    </dependency>
+    
 	<!-- 4.Spring -->
     <!-- Spring-1)Spring核心 -->
     <dependency>
